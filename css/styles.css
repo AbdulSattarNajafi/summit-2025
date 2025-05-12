@@ -81,7 +81,7 @@ li {
 
 h1 {
   font-size: 2.25rem;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -89,7 +89,7 @@ h1 {
 h2 {
   color: #000;
   font-size: 1.85rem;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.25;
 }
 h3 {
@@ -206,12 +206,6 @@ img {
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
   }
 }
 
@@ -360,8 +354,8 @@ img {
 
 .hero-video {
   width: 100%;
-  height: calc(85vh - 62px);
-  min-height: calc(600px - 62px);
+  height: calc(85vh - 60px);
+  min-height: calc(600px - 60px);
   object-fit: cover;
 }
 
@@ -371,7 +365,7 @@ img {
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
-  padding-top: 62px;
+  padding-top: 60px;
   z-index: 10;
 }
 
@@ -398,7 +392,7 @@ img {
 .hero__content-btn {
   background-color: var(--white);
   border-radius: 300px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   color: var(--secondary);
   padding: 16px 40px;
@@ -495,7 +489,7 @@ img {
 .timer__item-time {
   font-size: 3rem;
   color: rgb(29, 78, 216);
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -549,7 +543,7 @@ img {
 .events__card span {
   display: inline-block;
   margin-bottom: 0.5rem;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 3rem;
   line-height: 1;
   margin-bottom: 0.5rem;
@@ -611,6 +605,12 @@ img {
   border-radius: 0.5rem;
   padding: 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.attend__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .attend__card-icon {
@@ -633,7 +633,7 @@ img {
 .attend__card h3 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 4px;
 }
 .attend__card h3:last-of-type {
@@ -724,10 +724,24 @@ img {
 .agenda-subtitle {
   max-width: 56rem;
   margin-inline: auto;
-  margin-top: 1rem;
+
   margin-bottom: 3rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.agenda-subtitle p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.agenda-subtitle a {
+  color: rgb(37, 99, 235);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+.agenda-subtitle a:hover {
+  color: rgb(30, 64, 175);
 }
 
 .agenda__tab {
@@ -794,7 +808,7 @@ img {
   color: rgb(107, 114, 128);
 }
 .agenda__tab-date h4 {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #000;
@@ -879,7 +893,7 @@ img {
 .speakers__card-title h3 {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--white);
 }
 .speakers__card-title p {
@@ -950,7 +964,7 @@ img {
 .venue__texts h3 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 .venue__texts > p {
@@ -961,7 +975,7 @@ img {
 }
 
 .venue__texts h4 {
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 0.5rem;
   color: black;
 }
@@ -1100,7 +1114,7 @@ img {
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: rgb(29, 78, 216);
-  font-weight: 700;
+  font-weight: 600;
   padding: 1rem 2.5rem;
   transition: all 0.3s ease;
 }
@@ -1156,7 +1170,7 @@ img {
   margin-bottom: 1rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 .footer__menu-list {
   display: flex;
