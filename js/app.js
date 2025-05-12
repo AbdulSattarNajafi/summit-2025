@@ -9,22 +9,11 @@ navLinks.forEach((link) => {
   link.addEventListener('click', closeMenu);
 });
 
-// function toggleMenu() {
-//   menuBtn.classList.toggle('open');
-//   const isActive = menuBtn.classList.contains('open');
-
-//   if (isActive) {
-//     menuContent.style.maxHeight = menuContent.scrollHeight + 'px';
-//   } else {
-//     menuContent.style.maxHeight = null;
-//   }
-// }
 function toggleMenu() {
   menuContent.classList.toggle('open');
 }
 function closeMenu() {
   menuContent.classList.remove('open');
-  // menuContent.style.maxHeight = null;
 }
 
 // ============  Agenda Tabs
@@ -155,7 +144,7 @@ const footerYear = document.getElementById('full-year');
 footerYear.textContent = new Date().getFullYear();
 
 // ==================== Counter
-const workshopSection = document.getElementById('events');
+const eventsSection = document.getElementById('events');
 const counters = document.querySelectorAll('.events__card-count');
 const speed = 200;
 
@@ -165,9 +154,15 @@ const startCounter = (counter) => {
     const count = +counter.textContent;
     const inc = target / speed;
 
-    if (count < target) {
+    if (count < target && target > 100) {
       counter.textContent = Math.ceil(count + inc);
       setTimeout(updateCount, 8);
+    } else if (target < 20 && target > 9 && count < target) {
+      counter.textContent = Math.ceil(count + inc);
+      setTimeout(updateCount, 90);
+    } else if (target < 9 && count < target) {
+      counter.textContent = Math.ceil(count + inc);
+      setTimeout(updateCount, 200);
     } else {
       counter.textContent = target + '+';
     }
@@ -181,14 +176,14 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         counters.forEach((counter) => startCounter(counter));
-        observer.unobserve(workshopSection);
+        observer.unobserve(eventsSection);
       }
     });
   },
   { threshold: 0.25 }
 );
 
-observer.observe(workshopSection);
+observer.observe(eventsSection);
 
 // ===================== Countdown Timer
 document.addEventListener('DOMContentLoaded', () => {

@@ -737,7 +737,6 @@ img {
 
 .agenda-subtitle a {
   color: rgb(37, 99, 235);
-  font-weight: 500;
   transition: all 0.25s ease;
 }
 .agenda-subtitle a:hover {
