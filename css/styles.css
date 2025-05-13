@@ -655,10 +655,11 @@ img {
 /* ================== Highlights =============== */
 .highlights {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('./../assets/images/highlights-bg.webp');
+    url('./../assets/images/highlights-bg.jpg');
+  background-repeat: no-repeat;
   padding: 4rem 0;
   background-size: cover;
-  background-position: center;
+  background-position: center 25%;
   color: white;
 }
 
